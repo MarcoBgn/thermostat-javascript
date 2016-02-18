@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+	  <link rel="stylesheet type="text/css href="termstyle.css">
+	  <title>Digital Thermostat</title>
+  </head>
+  <body id="index" onload="">
+	  <section class='main-frame'>
+		  <h1 id="temperature">TEMP</h1>
+		  <p>
+			  <button id='temp-up'></button>
+			  <button id='temp-down'></button>
+			  <button id='reset'>reset</button>
+			  <p id='psmode-desc'> power saving mode is <span id='ps-mode'>on</span></p>
+			  <button id='ps-switch'>±</button>
+		  </p>
+	  </section>
+	  <script type="text/javascript" src="src/Thermostat.js"></script>
+	  <script src="jquery.js"></script>
+	  <script src="node_modules/private-parts/private-parts.js"></script>
+	  <script>
+	  	 $( document ).ready(function() {
+			 var thermostat = new Thermostat();
+			 
+			 $( '#temperature' ).text(thermostat.getTemperature());
+			  
+  		  	 $( "#temp-up" ).on('click', function () {
+  			   thermostat.raiseTemperature();
+  			   $( '#temperature' ).text(thermostat.getTemperature());
+	  	    });
+			 
+  		  	 $( "#temp-down" ).on('click', function () {
+  			   thermostat.lowerTemperature();
+  			   $( '#temperature' ).text(thermostat.getTemperature());
+	  	    });
+			 
+  		  	 $( "#reset" ).on('click', function () {
+  			   thermostat.resetTemperature();
+  			   $( '#temperature' ).text(thermostat.getTemperature());
+	  	    });
+	  	 });
+	  </script>
+  </body>
+</html>

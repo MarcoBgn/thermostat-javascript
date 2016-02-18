@@ -1,0 +1,100 @@
+h1 {
+	color: darkgreen;
+	position: relative;
+	left: 100px;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 400%;
+	width: 80px;
+	border: solid thin black;
+}
+
+body {
+	
+}
+
+section.main-frame {
+	border: solid thin;
+	position: relative;
+	width: 400px;
+	height: 250px;
+}
+
+#temp-up {
+	background-image: url(lib/images/buttons_sprite.png);
+	background-position: 100px 0px;
+	background-size: 300%;
+	color: black;
+	border: none;
+   width: 50px;
+	height: 30px;
+	position: relative;
+	left: 6px;
+	bottom: 140px;
+
+}
+
+#temp-down {
+	background-image: url(lib/images/buttons_sprite.png);
+	background-position: 50px -20px ;
+	background-size: 300%;
+	color: black;
+	border: none;
+   width: 50px;
+	height: 30px;
+	position: relative;
+	left: -48px;
+	bottom: 110px;
+
+}
+
+#ps-mode {
+	background-color: darkgray;
+	font-size: 120%;
+	color: black;
+	border: none;
+   width: 100px;
+	height: 100px;
+	position: relative;
+	left: 70px;
+	bottom: 0px;
+
+}
+
+#ps-switch {
+	background-color: darkgray;
+	font-size: 110%;
+	color: black;
+	border: none;
+   width: 100px;
+	height: 50px;
+	position: relative;
+	left: 240px;
+	bottom: 105px;
+
+}
+
+#psmode-desc {
+	background-color: darkgray;
+	color: black;
+	border: none;
+   width: 200px;
+	height: 20px;
+	position: relative;
+	left: 5px;
+	bottom: 50px;
+
+}
+
+
+
+#reset {
+	background-color: darkgray;
+	color: black;
+	border: none;
+   width: 120px;
+	height: 50px;
+	position: relative;
+	left: 120px;
+	bottom: 80px;
+
+}
