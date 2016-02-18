@@ -1,19 +1,37 @@
 h1 {
-	color: darkgreen;
+	background-color: rgb(0, 81, 225);
+	text-align: center;
 	position: relative;
+	color: inherit;
 	left: 100px;
+	top: 45px;
 	font-family: "Lucida Console", Monaco, monospace;
 	font-size: 400%;
-	width: 80px;
+	width: 100px;
 	border: solid thin black;
+}
+
+.low-usage {
+	color: green !important;
+}
+
+.medium-usage {
+	color: yellow !important;
+}
+
+.High-Usage {
+	color: red !important;
 }
 
 body {
 	
+	
 }
 
 section.main-frame {
-	border: solid thin;
+	background-color: rgb(0, 81, 225);
+	border: inset thin;
+	border-width: 20px;
 	position: relative;
 	width: 400px;
 	height: 250px;
@@ -21,80 +39,110 @@ section.main-frame {
 
 #temp-up {
 	background-image: url(lib/images/buttons_sprite.png);
-	background-position: 100px 0px;
-	background-size: 300%;
+	background-position: 108px 0px;
+	background-size: 330%;
 	color: black;
 	border: none;
    width: 50px;
 	height: 30px;
 	position: relative;
-	left: 6px;
-	bottom: 140px;
+	left: 26px;
+	bottom: 115px;
+	cursor: pointer;
 
 }
 
 #temp-down {
 	background-image: url(lib/images/buttons_sprite.png);
-	background-position: 50px -20px ;
-	background-size: 300%;
+	background-position: 53px -21px ;
+	background-size: 330%;
 	color: black;
 	border: none;
    width: 50px;
 	height: 30px;
 	position: relative;
-	left: -48px;
-	bottom: 110px;
-
+	left: -28px;
+	bottom: 68px;
+   cursor: pointer;
 }
 
 #ps-mode {
-	background-color: darkgray;
+	background-color: rgb(20, 128, 0);
+	font-family: "Lucida Console", Monaco, monospace;
+   text-align: center;
 	font-size: 120%;
 	color: black;
-	border: none;
-   width: 100px;
-	height: 100px;
+	border: solid thin black;
+   width: 40px;
+	height: 30px;
 	position: relative;
-	left: 70px;
-	bottom: 0px;
-
+	left: 239px;
+	bottom: 293px;
 }
 
 #ps-switch {
-	background-color: darkgray;
-	font-size: 110%;
-	color: black;
-	border: none;
-   width: 100px;
-	height: 50px;
+	background-color: rgb(0, 81, 225);
+	border: outset black;
+	border-radius: 20px;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 150%;
+   width: 120px;
+	height: 80px;
 	position: relative;
-	left: 240px;
-	bottom: 105px;
-
+	left: 228px;
+	bottom: 220px;
+   cursor: pointer;
 }
 
-#psmode-desc {
-	background-color: darkgray;
-	color: black;
+#ps-switch:hover {
+	background-color: rgb(0, 81, 200);
+}
+
+#ps-switch:active {
+	border: inset black;
+}
+
+#ps-switch:before {
 	border: none;
-   width: 200px;
+}
+
+
+
+
+
+#psmode-desc {
+	background-color: rgb(0, 81, 225);
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 100%;
+	color: rgb(200, 0, 0);
+   width: 220px;
 	height: 20px;
 	position: relative;
 	left: 5px;
-	bottom: 50px;
-
+	bottom: 245px;
+   cursor: pointer;
 }
 
 
 
 #reset {
-	background-color: darkgray;
-	color: black;
-	border: none;
+	background-color: rgb(0, 81, 225);
+	border: outset black;
+	border-radius: 20px;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 200%;
    width: 120px;
 	height: 50px;
 	position: relative;
 	left: 120px;
-	bottom: 80px;
+	bottom: 120px;
+   cursor: pointer;
+}
 
+#reset:hover {
+	background-color: rgb(0, 81, 200);
+}
+
+#reset:active {
+	border: inset black;
 }
