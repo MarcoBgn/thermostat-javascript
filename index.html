@@ -2,19 +2,25 @@
 
 <html>
   <head>
-	  <link rel="stylesheet type="text/css href="termstyle.css">
+	  <link rel="stylesheet type="text/css href="lib/font-awesome-4.5.0/css/font-awesome.min.css">
 	  <title>Digital Thermostat</title>
   </head>
   <body id="index" onload="">
 	  <section class='main-frame'>
 		  <h1 id="temperature">TEMP</h1>
+		  <select id='drop-menu'>
+			  <option selected='selected' value='london'>London</option>
+			  <option value='moscow'>Moscow</option>
+			  <option value='milan'>Milan</option>
+			  <option value='osaka'>Osaka</option>
+		  </select>
 		  <p>
-			  <button id='temp-up'></button>
-			  <button id='temp-down'></button>
+			  <button id='temp-up'><i class='fa fa-angle-double-up fa-5x'></i></button>
+			  <button id='temp-down'><i class='fa fa-angle-double-down fa-5x'></i></button>
 			  <button id='reset'>reset</button>
 			  <p id='psmode-desc'>Power saving mode is: </p>
 			  <p id='ps-mode'>on</p>
-			  <button id='ps-switch'>Power Saving</button>
+			  <button id='ps-switch'><i class="fa fa-toggle-on fa-2x"></i></button>
 			  <p id='city-temp'>00</p>
 		  </p>
 	  </section>
@@ -25,12 +31,19 @@
 	  	 $( document ).ready(function() {
 			 var thermostat = new Thermostat();
 			 var data; 
+			 var city;
+		 
+		    city = 'london';
+		 $.get("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=44db6a862fba0b067b1930da0d769e98", function(data) { 
+			 $( '#city-temp' ).text(data.main.temp + "^");
+			 });
 			 
-			 $.get('http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=44db6a862fba0b067b1930da0d769e98', function(data) {
+		$ ('select').on('change', function(){
+			 city = this.value;
+			 $.get("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=44db6a862fba0b067b1930da0d769e98", function(data) {
 			 $( '#city-temp' ).text(data.main.temp);
 			 })
-			 
-			 
+		}); 	 
 			 
 			 Thermostat.prototype.changeDisplay = function() {
 				$( '#temperature' ).text(thermostat.getTemperature());
@@ -63,11 +76,10 @@
   			   thermostat.switchPowerSaving();
 				if ( $( '#ps-mode' ).text() === 'off') {
 					$( '#ps-mode').text('on');
-					$( '#ps-mode').css('background-color', "rgb(0, 128, 0)");
+					$( this ).find($(".fa")).removeClass('fa-toggle-off').addClass('fa-toggle-on');
 				} else {
 					$( '#ps-mode').text('off');
-					$( '#ps-mode').css('background-color', "rgb(255, 0, 0)")
-					
+					$( this ).find($(".fa")).removeClass('fa-toggle-on').addClass('fa-toggle-off');
 				};
 	  	    });
 	  	 });
