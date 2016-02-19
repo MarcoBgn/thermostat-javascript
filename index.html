@@ -44,13 +44,13 @@
 	  	    });
 			 
   		  	 $( "#reset" ).on('click', function() {
-				$( '#temperature').css('color', 'yellow')
   			   thermostat.resetTemperature();
   			   $( '#temperature' ).text(thermostat.getTemperature());
 	  	    });
 			 
   		  	 $( "#ps-switch" ).on('click', function() {
 				thermostat.resetTemperature();
+				thermostat.changeDisplay(); 
 				$( '#temperature' ).text(thermostat.getTemperature());
   			   thermostat.switchPowerSaving();
 				if ( $( '#ps-mode' ).text() === 'off') {
