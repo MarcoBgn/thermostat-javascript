@@ -15,6 +15,7 @@
 			  <p id='psmode-desc'>Power saving mode is: </p>
 			  <p id='ps-mode'>on</p>
 			  <button id='ps-switch'>Power Saving</button>
+			  <p id='city-temp'>00</p>
 		  </p>
 	  </section>
 	  <script type="text/javascript" src="src/Thermostat.js"></script>
@@ -23,6 +24,13 @@
 	  <script>
 	  	 $( document ).ready(function() {
 			 var thermostat = new Thermostat();
+			 var data; 
+			 
+			 $.get('http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=44db6a862fba0b067b1930da0d769e98', function(data) {
+			 $( '#city-temp' ).text(data.main.temp);
+			 })
+			 
+			 
 			 
 			 Thermostat.prototype.changeDisplay = function() {
 				$( '#temperature' ).text(thermostat.getTemperature());
