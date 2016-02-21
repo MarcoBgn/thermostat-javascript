@@ -1,15 +1,15 @@
 # Thermostat  - JavaScript
 ----------------------------------------
 
-Author
+Authors
 ------
 
-* Marco Bagnasco @ Makers Academy (Ronin) - Week 5
+* Marco Bagnasco (Paired with Frazer Watson & Barry Grubb) @ Makers Academy (Ronin) - Week 5
 
 Technologies
 ------------
 
-* JavaScript, Jasmine, PrivateParts. 
+* JavaScript, Jasmine, PrivateParts, OpenWeatherMap API. 
 
 Requirements
 ------------
@@ -26,3 +26,12 @@ Requirements
   -  The thermostat should color the display based on energy usage - < 18 is green, < 25 is yellow, otherwise red
 
 ```
+
+Screenshots
+-----------
+
+![Thermostat](/docs/Screen1.png?raw=true "Screen Shot 1")
+
+-----------
+
+![Thermostat](/docs/Screen2.png?raw=true "Screen Shot 2")
