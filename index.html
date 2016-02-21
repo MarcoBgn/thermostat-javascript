@@ -1,29 +1,29 @@
 <!DOCTYPE HTML>
 
 <html>
-  <head>
-	  <link rel="stylesheet type="text/css href="lib/font-awesome-4.5.0/css/font-awesome.min.css">
-	  <title>Digital Thermostat</title>
-  </head>
-  <body id="index" onload="">
-	  <section class='main-frame'>
-		  <h1 id="temperature">TEMP</h1>
-		  <select id='drop-menu'>
-			  <option selected='selected' value='london'>London</option>
-			  <option value='moscow'>Moscow</option>
-			  <option value='milan'>Milan</option>
-			  <option value='osaka'>Osaka</option>
-		  </select>
-		  <p>
-			  <button id='temp-up'><i class='fa fa-angle-double-up fa-5x'></i></button>
-			  <button id='temp-down'><i class='fa fa-angle-double-down fa-5x'></i></button>
-			  <button id='reset'>reset</button>
-			  <p id='psmode-desc'>Power saving mode is: </p>
-			  <p id='ps-mode'>on</p>
-			  <button id='ps-switch'><i class="fa fa-toggle-on fa-2x"></i></button>
-			  <p id='city-temp'>00</p>
-		  </p>
-	  </section>
+<head>
+  <link rel="stylesheet type="text/css href="lib/font-awesome-4.5.0/css/font-awesome.min.css">
+  <title>Digital Thermostat</title>
+</head>
+<body id="index" onload="">
+  <section class='main-frame'>
+    <h1 id="temperature">TEMP</h1>
+    <select id='drop-menu'>
+      <option selected='selected' value='london'>London</option>
+      <option value='moscow'>Moscow</option>
+      <option value='milan'>Milan</option>
+      <option value='osaka'>Osaka</option>
+    </select>
+    <p>
+      <button id='temp-up'><i class='fa fa-angle-double-up fa-5x'></i></button>
+      <button id='temp-down'><i class='fa fa-angle-double-down fa-5x'></i></button>
+      <button id='reset'>reset</button>
+      <p id='psmode-desc'>Power saving mode is: </p>
+      <p id='ps-mode'>on</p>
+      <button id='ps-switch'><i class="fa fa-toggle-on fa-2x"></i></button>
+      <p id='city-temp'>00</p>
+    </p>
+  </section>
 	  <script type="text/javascript" src="src/Thermostat.js"></script>
 	  <script src="jquery.js"></script>
 	  <script src="node_modules/private-parts/private-parts.js"></script>

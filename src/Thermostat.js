@@ -1,6 +1,4 @@
 'use strict';
-
-//define(['node_modules/private-parts/private-parts'], function() {};);
 	
 
 	var Thermostat = function() {
