@@ -1,0 +1,189 @@
+@import 'base';
+@import url('../lib/font-awesome-4.5.0/css/font-awesome.min.css');
+
+h1 {
+	background: -moz-linear-gradient(right, rgb(0, 81, 225), rgb(0, 81, 120));
+	background: -webkit-linear-gradient(right, rgb(0, 81, 225), rgb(0, 81, 120));
+	text-align: center;
+	position: relative;
+	color: inherit;
+	left: 200px;
+	top: 200px;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 500%;
+	width: 200px;
+	border-radius: 20px;
+}
+
+h1:hover {
+	background-color: rgb(0, 85, 180);
+}
+
+.low-usage {
+	color: green !important;
+}
+
+.medium-usage {
+	color: yellow !important;
+}
+
+.High-Usage {
+	color: red !important;
+}
+
+body {
+	
+	background: -moz-linear-gradient(right, rgb(0, 81, 225), rgb(0, 81, 80));
+	background: -webkit-linear-gradient(right, rgb(0, 81, 225), rgb(0, 81, 80));
+}
+
+section.main-frame {
+	background: -moz-linear-gradient(right, rgb(0, 81, 225), rgb(0, 81, 120));
+	background: -webkit-linear-gradient(right, rgb(0, 81, 225), rgb(0, 81, 120));
+	border-radius: 10px;
+	border: none;
+	border-width: 20px;
+	position: relative;
+	width: 600px;
+	height: 400px;
+}
+
+#drop-menu {
+	background-color: transparent;
+	border: none;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 150%;
+	position: relative;
+	left: 40px;
+	bottom: 120px;
+	
+}
+
+#temp-up {
+	background-color: transparent;
+	background-position: 108px 0px;
+	background-size: 330%;
+	color: black;
+	border: none;
+   width: 50px;
+	height: 50px;
+	position: relative;
+	left: 126px;
+	bottom: 30px;
+	cursor: pointer;
+
+}
+
+#temp-up:hover {
+	background-color: rgb(0, 81, 200)
+}
+
+#temp-down {
+	background-color: transparent;
+	background-position: 53px -21px ;
+	background-size: 330%;
+	color: black;
+	border: none;
+   width: 50px;
+	height: 50px;
+	position: relative;
+	left: 72px;
+	bottom: -40px;
+   cursor: pointer;
+}
+
+#temp-down:hover {
+	background-color: rgb(0, 81, 200)
+}
+
+#ps-mode {
+	background-color: transparent;
+	font-family: "Lucida Console", Monaco, monospace;
+   text-align: center;
+	font-size: 160%;
+	color: black;
+	border: none;
+	border-radius: 10px;
+   width: 40px;
+	height: 30px;
+	position: relative;
+	left: 410px;
+	bottom: 303px;
+}
+
+#ps-switch {
+	background: $gradient_left;
+	border: none;
+	border-radius: 20px;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 150%;
+   width: 70px;
+	height: 50px;
+	position: relative;
+	left: 480px;
+	bottom: 363px;
+   cursor: pointer;
+}
+
+#ps-switch:hover {
+	background-color: rgb(0, 81, 225);
+}
+
+#ps-switch:active {
+	border: inset black;
+}
+
+#ps-switch:before {
+	border: none;
+}
+
+#psmode-desc {
+	background-color: transparent;
+	border-radius: 20;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 100%;
+	text-align: center;
+	color: black;
+   width: 210px;
+	height: 20px;
+	position: relative;
+	left: 200px;
+	bottom: 250px;
+   cursor: pointer;
+}
+
+#reset {
+	background: -moz-linear-gradient(left, rgb(0, 81, 225), rgb(0, 81, 120));
+	background: -webkit-linear-gradient(left, rgb(0, 81, 225), rgb(0, 81, 120));
+	background-color: rgb(0, 81, 225);
+	border: none;
+   border-radius: 20px;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 200%;
+   width: 120px;
+	height: 50px;
+	position: relative;
+	left: 343px;
+	bottom: 10px;
+   cursor: pointer;
+}
+
+#reset:hover {
+	background-color: rgb(0, 81, 200);
+}
+
+#reset:active {
+	border: inset black;
+}
+
+#city-temp {
+	background: -moz-linear-gradient(right, rgb(0, 81, 225), rgb(0, 81, 120));
+	background: -webkit-linear-gradient(right, rgb(0, 81, 225), rgb(0, 81, 120));
+	font-family: "Lucida Console", Monaco, monospace;
+	border-radius: 20px;
+	position: relative;
+	font-size: 200%;
+	bottom: 370px;
+	left: 50px;
+	width: 100px;
+}
