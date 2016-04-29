@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -55,8 +55,8 @@
 			 $( '#temperature').css('color', 'yellow')
 			  
   		  	 $( "#temp-up" ).on('click', function() {
-  			   thermostat.raiseTemperature();
-				thermostat.changeDisplay(); 
+  			     thermostat.raiseTemperature();
+			       thermostat.changeDisplay(); 
 	  	    });
 			 
   		  	 $( "#temp-down" ).on('click', function() {
@@ -67,6 +67,7 @@
   		  	 $( "#reset" ).on('click', function() {
   			   thermostat.resetTemperature();
   			   $( '#temperature' ).text(thermostat.getTemperature());
+           thermostat.changeDisplay();
 	  	    });
 			 
   		  	 $( "#ps-switch" ).on('click', function() {
