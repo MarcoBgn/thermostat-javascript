@@ -46,42 +46,42 @@
 		}); 	 
 			 
 			 Thermostat.prototype.changeDisplay = function() {
-				$( '#temperature' ).text(thermostat.getTemperature());
+			   $( '#temperature' ).text(thermostat.getTemperature());
 			   $( '#temperature' ).attr('class', thermostat.display())
 			 };
 			 
-			 $( '#temperature' ).text(thermostat.getTemperature());
+			   $( '#temperature' ).text(thermostat.getTemperature());
 			 
-			 $( '#temperature').css('color', 'yellow')
-			  
+			   $( '#temperature').css('color', 'yellow')
+			    
   		  	 $( "#temp-up" ).on('click', function() {
   			     thermostat.raiseTemperature();
 			       thermostat.changeDisplay(); 
 	  	    });
 			 
   		  	 $( "#temp-down" ).on('click', function() {
-  			   thermostat.lowerTemperature();
-				thermostat.changeDisplay();
+  			     thermostat.lowerTemperature();
+				     thermostat.changeDisplay();
 	  	    });
 			 
   		  	 $( "#reset" ).on('click', function() {
-  			   thermostat.resetTemperature();
+  			     thermostat.resetTemperature();
   			   $( '#temperature' ).text(thermostat.getTemperature());
-           thermostat.changeDisplay();
+             thermostat.changeDisplay();
 	  	    });
 			 
   		  	 $( "#ps-switch" ).on('click', function() {
-				thermostat.resetTemperature();
-				thermostat.changeDisplay(); 
-				$( '#temperature' ).text(thermostat.getTemperature());
-  			   thermostat.switchPowerSaving();
-				if ( $( '#ps-mode' ).text() === 'off') {
-					$( '#ps-mode').text('on');
-					$( this ).find($(".fa")).removeClass('fa-toggle-off').addClass('fa-toggle-on');
-				} else {
-					$( '#ps-mode').text('off');
-					$( this ).find($(".fa")).removeClass('fa-toggle-on').addClass('fa-toggle-off');
-				};
+			       thermostat.resetTemperature();
+			       thermostat.changeDisplay(); 
+			     $( '#temperature' ).text(thermostat.getTemperature());
+  			     thermostat.switchPowerSaving();
+			      	if ( $( '#ps-mode' ).text() === 'off') {
+				      	$( '#ps-mode').text('on');
+			      		$( this ).find($(".fa")).removeClass('fa-toggle-off').addClass('fa-toggle-on');
+				      } else {
+				      	$( '#ps-mode').text('off');
+			      		$( this ).find($(".fa")).removeClass('fa-toggle-on').addClass('fa-toggle-off');
+			      	};
 	  	    });
 	  	 });
 	  </script>

@@ -12,15 +12,11 @@
 		}
 	
 		Thermostat.prototype.switchPowerSaving = function() {
-			(this.powerSaving == true) ? (this.powerSaving = false) : (this.powerSaving = true)
+			(this.powerSaving) ? (this.powerSaving = false) : (this.powerSaving = true)
 		}
 	
 		Thermostat.prototype.isPowerSavingOn = function() {
-			if (this.powerSaving) {
-				return true ;
-			} else {
-				return false ;
-		   }
+			if (this.powerSaving) return true;
 	   }
 	
 	   Thermostat.prototype._isMinimumTemp = function() {
@@ -32,11 +28,11 @@
 		}
 	
 		Thermostat.prototype.isMaxTempWithPSMon = function() {
-			if (this.isPowerSavingOn() && this.temperature === 25) {return true};
+			if (this.isPowerSavingOn() && this.temperature === 25) return true;
 		}
 	
 		Thermostat.prototype.isMaxTempWithPSMoff = function() {
-			if (!this.isPowerSavingOn() && this.temperature === 32) {return true};
+			if (!this.isPowerSavingOn() && this.temperature === 32) return true;
 		}
 	
 		Thermostat.prototype.raiseTemperature = function() {
